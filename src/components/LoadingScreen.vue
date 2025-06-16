@@ -1,5 +1,9 @@
 <script setup>
 
+const props = defineProps({
+    show: Boolean
+})
+
 const loadingBrandLabel = [
     "RedScope",
     "Technologies"
@@ -7,20 +11,20 @@ const loadingBrandLabel = [
 
 
 
-function loadingScreen(mode) {
-    switch (mode) {
-        case "show":
-            document.getElementById("loading-screen").setAttribute("class", "active");
-            break;
-        case "hide":
-            document.getElementById("loading-screen").setAttribute("class", "inactive");
-            break;
-    }
-}
+// function loadingScreen(mode) {
+//     switch (mode) {
+//         case "show":
+//             document.getElementById("loading-screen").setAttribute("class", "active");
+//             break;
+//         case "hide":
+//             document.getElementById("loading-screen").setAttribute("class", "inactive");
+//             break;
+//     }
+// }
 </script>
 
 <template>
-    <div id="loading-screen" class="active">
+    <div id="loading-screen" :class="(props.show) ? 'active' : 'inactive'">
         <div class="animation-box">
             <div class="logo-hook">
                 <div class="in">
