@@ -8,14 +8,14 @@ const loading = ref({
   show: true
 })
 
-function loadingHide() {
-  loading.show = false
-}
-
-document.addEventListener(
-  "DOMContentLoaded",
-  () => { setTimeout(loadingHide, 1000) }
-)
+// document.addEventListener(
+//   "DOMContentLoaded",
+//   () => {
+setTimeout(() => {
+  loading.value.show = false;
+}, 1000)
+//   }
+// )
 
 
 const cookies = ref({
