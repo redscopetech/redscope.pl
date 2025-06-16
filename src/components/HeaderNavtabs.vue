@@ -1,5 +1,9 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+
+
+
+
 </script>
 
 <template>
@@ -7,7 +11,7 @@ import { RouterLink } from 'vue-router'
         <img alt="Vue logo" class="logo" src="@/assets/redscope-tech-logo.png" width="125" height="125" />
         <nav class="tabs is-centered is-boxed">
             <ul>
-                <li class="is-active is-danger">
+                <li class="is-active">
                     <RouterLink to="/">
                         <span class="icon is-small">
                             &#x1F441;
@@ -44,8 +48,8 @@ import { RouterLink } from 'vue-router'
     </header>
 </template>
 
-<style lang="css" scoped>
-:root {
-    --bulma-tabs-link-active-color: #8f0000;
+<style lang="css">
+header nav.tabs li.is-active span {
+    color: #ff0000 !important;
 }
 </style>

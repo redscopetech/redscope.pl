@@ -1,9 +1,7 @@
 <script setup>
-
+import PresentingSection from '@/components/PresentingSection.vue';
 </script>
 
 <template>
-  <main>
-    <h1>HI! this is home without house</h1>
-  </main>
+  <PresentingSection></PresentingSection>
 </template>
