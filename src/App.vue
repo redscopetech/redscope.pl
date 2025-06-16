@@ -17,6 +17,7 @@ setTimeout(() => {
 //   }
 // )
 
+console.log(document.cookie)
 
 const cookies = ref({
   OK: false,
