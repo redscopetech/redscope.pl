@@ -7,9 +7,14 @@ import { ref } from 'vue';
 const loading = ref({
   show: true
 })
+
+function loadingHide() {
+  loading.show = false
+}
+
 document.addEventListener(
   "DOMContentLoaded",
-  () => { setTimeout(() => { loading.show = false }, 1000) }
+  () => { setTimeout(loadingHide, 1000) }
 )
 
 
