@@ -1,9 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-
+import LoadingScreen from './components/LoadingScreen.vue';
 </script>
 
 <template>
+  <LoadingScreen></LoadingScreen>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/redscope-tech-logo.png" width="125" height="125" />
 
