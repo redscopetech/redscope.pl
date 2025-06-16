@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '../components/WelcomeSection.vue'
+
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <h1>HI! this is home without house</h1>
   </main>
 </template>

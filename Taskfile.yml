@@ -8,5 +8,9 @@ vars:
 tasks:
   default:
     cmds:
-      - echo "{{.GREETING}}"
-    silent: true
+      - npm install
+      - git add .
+      - git commit
+      - npm run build
+      - npm run dev
+    silent: false
