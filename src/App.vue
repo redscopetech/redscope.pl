@@ -1,5 +1,6 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import HeaderNavtabs from './components/HeaderNavtabs.vue';
+import MainContainer from './components/MainContainer.vue';
 import LoadingScreen from './components/LoadingScreen.vue';
 import OkeyCookiesModal from './components/OkeyCookiesModal.vue';
 import { ref } from 'vue';
@@ -20,7 +21,7 @@ setTimeout(() => {
 console.log(document.cookie)
 
 const cookies = ref({
-  OK: false,
+  OK: document.cookie.trim() != "",
   terms: "",
   fullnote: "",
   notice: `
@@ -46,27 +47,22 @@ For example, to denote a heading, you add a number sign before it (e.g., # Headi
   
   `
 })
+
+function acceptRequiredLocalStorageUse() {
+  document.cookie = `acceptCookiesUseTerms=GRANTED`;
+  cookies.value.OK = true
+}
+
 </script>
 
 <template>
   <LoadingScreen :show="loading.show"></LoadingScreen>
   <OkeyCookiesModal :cookies-required-notice="cookies.notice" :okidoki-flag="cookies.OK"
     :terms-and-policies-link="cookies.terms" :cookies-full-agreement-link="cookies.fullnote"
-    @approval="() => { cookies.OK = true }">
+    @approval="acceptRequiredLocalStorageUse">
   </OkeyCookiesModal>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/redscope-tech-logo.png" width="125" height="125" />
-
-    <div class="wrapper">
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <HeaderNavtabs></HeaderNavtabs>
+  <MainContainer></MainContainer>
 </template>
 
 <style scoped></style>
