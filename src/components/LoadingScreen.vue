@@ -24,17 +24,17 @@ function loadingScreen(mode) {
         <div class="animation-box">
             <div class="logo-hook">
                 <div class="in">
-                    <div class="description-of-logo active">CLICK HERE TO VISIT MORE</div>
+                    <div class="description-of-logo active">CLICK HERE TO SEE MORE ART OF CODE</div>
                     <div class="logo name">
                         <a class="pure-anchor homesite" target="_blank" href="http://sarverott.com/">
-                            <span class="logo-letter"
-                                v-for="logoletter in loadingBrandLabel[0].split('')">{{ logoletter }}</span>
+                            <span class="logo-letter" v-for="logoletter in loadingBrandLabel[0].split('')">{{ logoletter
+                            }}</span>
                         </a>
                     </div>
                     <div class="logo soft">
                         <a class="pure-anchor homesite" target="_blank" href="http://sarverott.com/">
-                            <span class="logo-letter"
-                                v-for="logoletter in loadingBrandLabel[1].split('')">{{ logoletter }}</span>
+                            <span class="logo-letter" v-for="logoletter in loadingBrandLabel[1].split('')">{{ logoletter
+                            }}</span>
                         </a>
                     </div>
                 </div>
@@ -48,16 +48,16 @@ function loadingScreen(mode) {
     </div>
 </template>
 
-<style module>
+<style scoped>
 .description-of-logo {
     left: 1%;
     color: #800;
     opacity: 0;
     position: absolute;
-    top: -140px;
+    top: -160px;
     width: 100%;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     -webkit-transition: all 500ms ease-in-out;
     -moz-transition: all 500ms ease-in-out;
     -ms-transition: all 500ms ease-in-out;
@@ -118,13 +118,30 @@ function loadingScreen(mode) {
     animation-delay: 0.9s;
 }
 
+.logo-letter:nth-of-type(10) {
+    animation-delay: 1.0s;
+}
+
+.logo-letter:nth-of-type(11) {
+    animation-delay: 1.1s;
+}
+
+.logo-letter:nth-of-type(12) {
+    animation-delay: 1.2s;
+}
+
+.logo-letter:nth-of-type(13) {
+    animation-delay: 1.3s;
+}
+
 .logo {
+    font-size: 20px;
     position: absolute;
     left: 10%;
     width: 81%;
     text-align: center;
     color: #f00;
-    font-family: Arial;
+    font-family: monospace;
 }
 
 .logo.name {
