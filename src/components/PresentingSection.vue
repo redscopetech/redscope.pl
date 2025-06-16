@@ -1,9 +1,23 @@
 <script setup>
-import SliderRevealer from './SliderRevealer.vue';
+//import SliderRevealer from './SliderRevealer.vue';
+
+import Particles from 'particles.js'
+
+onMounted(() => {
+    Particles.init({
+        selector: '#backgroundImpresionCanvas',
+        connectParticles: true,
+        //maxParticles: (1000<(window.innerWidth+window.innerHeight)/2)?420:100
+        maxParticles: 123
+    });
+})
+
+
 </script>
 
 <template>
     <section class="hero is-dark is-large">
+        <canvas id="backgroundImpresionCanvas"></canvas>
         <div class="hero-head">
             <nav class="navbar">
                 <div class="container">
@@ -71,5 +85,14 @@ import SliderRevealer from './SliderRevealer.vue';
             </nav>
         </div>
     </section>
-    <SliderRevealer></SliderRevealer>
+
 </template>
+<style lang="css" scoped>
+#backgroundImpresionCanvas {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+</style>

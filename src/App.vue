@@ -5,6 +5,8 @@ import LoadingScreen from './components/LoadingScreen.vue';
 import OkeyCookiesModal from './components/OkeyCookiesModal.vue';
 import { ref } from 'vue';
 
+
+
 const loading = ref({
   show: true
 })
