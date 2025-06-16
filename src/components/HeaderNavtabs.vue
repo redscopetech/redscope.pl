@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 
-
+import { PowerGlitch } from 'powerglitch';
 
 setInterval(() => PowerGlitch.glitch('.logotext'), 3000)
 

@@ -1,6 +1,6 @@
 <script setup>
 //import SliderRevealer from './SliderRevealer.vue';
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 import Particles from 'particlesjs'
 
 onMounted(() => {
@@ -12,6 +12,7 @@ onMounted(() => {
     });
 })
 
+on
 
 </script>
 

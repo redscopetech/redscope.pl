@@ -4,7 +4,7 @@ import MainContainer from './components/MainContainer.vue';
 import LoadingScreen from './components/LoadingScreen.vue';
 import OkeyCookiesModal from './components/OkeyCookiesModal.vue';
 import { ref } from 'vue';
-
+import FooterSublitets from './components/FooterSublitets.vue';
 
 
 const loading = ref({
@@ -65,6 +65,7 @@ function acceptRequiredLocalStorageUse() {
   </OkeyCookiesModal>
   <HeaderNavtabs></HeaderNavtabs>
   <MainContainer></MainContainer>
+  <FooterSublitets></FooterSublitets>
 </template>
 
 <style scoped></style>
