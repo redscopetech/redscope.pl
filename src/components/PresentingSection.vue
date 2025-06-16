@@ -1,7 +1,7 @@
 <script setup>
 //import SliderRevealer from './SliderRevealer.vue';
 
-import Particles from 'particles.js'
+import Particles from 'particlesjs'
 
 onMounted(() => {
     Particles.init({
