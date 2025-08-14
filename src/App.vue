@@ -14,9 +14,9 @@ const loading = ref({
 // document.addEventListener(
 //   "DOMContentLoaded",
 //   () => {
-// setTimeout(() => {
-//   loading.value.show = false;
-// }, 1000)
+setTimeout(() => {
+  loading.value.show = false;
+}, 1000)
 //   }
 // )
 

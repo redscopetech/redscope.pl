@@ -9,7 +9,7 @@ setInterval(() => PowerGlitch.glitch('.logotext'), 3000)
 </script>
 
 <template>
-    <header class="container is-fluid hero has-background-danger-dark is-large">
+    <header class="container is-fluid hero has-background-light is-large">
         <canvas id="backgroundImpresionCanvas"></canvas>
         <div class="hero-head">
             <nav class="navbar">
@@ -47,7 +47,7 @@ setInterval(() => PowerGlitch.glitch('.logotext'), 3000)
         <div class="hero-body">
             <div class="container has-text-centered">
                 <p class="title">
-                    <img class="logotext" src="/img/redscope-logotext.png" alt="Logo" />
+                    <img class="logotext" style="filter: drop-shadow(-3px 3px 0.75rem crimson) drop-shadow( -1px -3px 1px red) drop-shadow(3px -3px 0.75rem grey);" src="/img/redscope-logotext.png" alt="Logo" />
                 </p>
                 <p class="subtitle">Subtitle</p>
             </div>
