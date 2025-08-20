@@ -32,6 +32,14 @@ echo Hello world from $(whoami)! In order to get your application running in a c
 > /bin/hello.sh
 RUN chmod +x /bin/hello.sh
 
+RUN apk add nodejs python3 npm py3-pip git 
+
+COPY . /app/
+
+RUN cd /app/
+RUN npm install 
+RUN npm 
+
 ################################################################################
 # Create a final stage for running your application.
 #

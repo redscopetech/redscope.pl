@@ -21,3 +21,12 @@ app.use(pinia)
 app.use(router)
 
 app.mount('#app')
+
+
+//var stdin = ;
+
+//var data = "";
+//((stdin=process.openStdin(), data="")=>{stdin.on('data',(chunk)=>data+=chunk);stdin.on('end',()=>console.log(JSON.stringify(JSON.parse(data),2,null),"\n"));})()
+
+
+
